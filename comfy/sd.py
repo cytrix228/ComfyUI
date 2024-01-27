@@ -429,7 +429,11 @@ def load_checkpoint(config_path=None, ckpt_path=None, output_vae=True, output_cl
 
 def load_checkpoint_guess_config(ckpt_path, output_vae=True, output_clip=True, output_clipvision=False, embedding_directory=None, output_model=True):
     sd = comfy.utils.load_torch_file(ckpt_path)
+    print(ckpt_path)
+
     sd_keys = sd.keys()
+    #print(sd_keys)
+
     clip = None
     clipvision = None
     vae = None
